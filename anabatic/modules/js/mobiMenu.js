@@ -7,7 +7,7 @@
 	    menulist_inputparam["httpconfigs"] = {};	    
 	    var menuList = appmiddlewareinvokerasync(menulist_inputparam, mobiMenuCallback);
 	    kony.application.showLoadingScreen("loadskin","Loading...",constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true,true,null);
-	    kony.print("Call to Menu List Java Service");
+	    kony.print("......Call to Menu List Java Service..........");
 	}
 	
 	function mobiMenuCallback(status, menuListServiceData){
