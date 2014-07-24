@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application name="anabatic" id="anabatic">
+    <container type="dialog" id="keywordPageFooter" displayname="Popup"/>
+    <container type="form" id="frmBalanceEquiry" displayname="Form"/>
+    <container type="form" id="frmFundTransfer" displayname="Form">
+        <component type="textbox2" id="txtAcctNumber" displayname="TextBox2"/>
+        <component type="textbox2" id="txtAmount" displayname="TextBox2"/>
+        <component type="textbox2" id="txtDescription" displayname="TextBox2"/>
+    </container>
+    <container type="form" id="menu" displayname="Form"/>
+    <globalsequences/>
+    <skins/>
+</application>

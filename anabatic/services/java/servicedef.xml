@@ -1,0 +1,43 @@
+<application desc="" id="anabatic" name="" smscode="">
+   <app-config>
+      <config-param name="APP_SMS_HEADER" value="null"/>
+   </app-config>
+   <services>
+      <service cachable="false" cacheduration="" id="menulists_mysql" smscode="" smsenabled="false" type="javaConnector">
+         <service-config>
+            <config-param name="className" value="com.anabatic.services.MobiMenu"/>
+            <config-param name="methodName" value="MobiMenuService"/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="sockettimeout" value=""/>
+         </service-config>
+         <service-input/>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="opstatus" sms-name="" src="" target="response"/>
+            <dataset id="mobiMenu">
+               <param datatype="string" format="None" formatvalue="" name="menuid" sms-name="" src="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="menuname" sms-name="" src="" target=""/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="fundtransfer_mysql" smscode="" smsenabled="false" type="javaConnector">
+         <service-config>
+            <config-param name="className" value="com.anabatic.services.MobiFundTransfer"/>
+            <config-param name="methodName" value="MobiFundTransferService"/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="sockettimeout" value=""/>
+         </service-config>
+         <service-input/>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="opstatus" sms-name="" src="" target="response"/>
+            <dataset id="fundTransfer">
+               <param datatype="string" format="None" formatvalue="" name="lid" sms-name="" src="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="lname" sms-name="" src="" target=""/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
+   </services>
+</application>

@@ -1,0 +1,83 @@
+<application desc="" id="anabatic" name="" smscode="">
+   <app-config>
+      <config-param name="APP_SMS_HEADER" value="null"/>
+   </app-config>
+   <services>
+      <service cachable="false" cacheduration="" id="CustomerDetails" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://192.168.0.31:8081/Micro/services"/>
+            <config-param name="soapAction" value=""/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:mic=&quot;http://temenos.com/Micro&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;mic:CustomerDetails&gt;&lt;!--Optional:--&gt;&lt;WebRequestCommon&gt;&lt;!--Optional:--&gt;&lt;company&gt;PH0010001&lt;/company&gt;&lt;password&gt;123123&lt;/password&gt;&lt;userName&gt;ASJAD2&lt;/userName&gt;&lt;/WebRequestCommon&gt;&lt;!--Optional:--&gt;&lt;PBCOMNOFILECUSTOMERDETAILSType&gt;&lt;!--Zero or more repetitions:--&gt;&lt;enquiryInputCollection&gt;&lt;!--Optional:--&gt;&lt;columnName&gt;@ID&lt;/columnName&gt;&lt;!--Optional:--&gt;&lt;criteriaValue&gt;100...&lt;/criteriaValue&gt;&lt;!--Optional:--&gt;&lt;operand&gt;LK&lt;/operand&gt;&lt;/enquiryInputCollection&gt;&lt;/PBCOMNOFILECUSTOMERDETAILSType&gt;&lt;/mic:CustomerDetails&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;"/>
+         </service-input>
+         <service-output>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="STATEMENTTODAY" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://192.168.0.31:8081/Micro/services"/>
+            <config-param name="soapAction" value=""/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <header>
+               <param datatype="string" format="None" formatvalue="" name="Com" sms-name="" src="" target="" value=""/>
+               <param datatype="string" format="None" formatvalue="" name="Pass" sms-name="" src="" target="" value=""/>
+            </header>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:mic=&quot;http://temenos.com/Micro&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;mic:STATEMENTTODAY&gt;&lt;!--Optional:--&gt;&lt;WebRequestCommon&gt;&lt;!--Optional:--&gt;&lt;company&gt;PH0010001&lt;/company&gt;&lt;password&gt;123123&lt;/password&gt;&lt;userName&gt;ASJAD2&lt;/userName&gt;&lt;/WebRequestCommon&gt;&lt;!--Optional:--&gt;&lt;ACCOUNTSTATEMENTType&gt;&lt;!--Zero or more repetitions:--&gt;&lt;enquiryInputCollection&gt;&lt;!--Optional:--&gt;&lt;columnName&gt;STATEMENT.ID&lt;/columnName&gt;&lt;!--Optional:--&gt;&lt;criteriaValue&gt;110018401&lt;/criteriaValue&gt;&lt;!--Optional:--&gt;&lt;operand&gt;EQ&lt;/operand&gt;&lt;/enquiryInputCollection&gt;&lt;/ACCOUNTSTATEMENTType&gt;&lt;/mic:STATEMENTTODAY&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="Com" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="Pass" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="Name" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="colName" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="criterialV" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="Opd" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="Providers" src="//ACCOUNTSTATEMENTType">
+               <param datatype="string" format="None" formatvalue="" name="name" sms-name="" src="HNAME1" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="amount" sms-name="" src="CLOSINGBALANCE" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="currency" sms-name="" src="ACCOUNTCURRENCY" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+   </services>
+</application>
